@@ -1,0 +1,146 @@
+Hyperbole Magic
+
+* Introduction
+
+I've been trying, and failing, to understand GNU Hyperbole for a few years --
+the package always reminded me of the Monolith from 2001: an object that
+radiated power, but whose purpose was beyond my comprehension. And I know I'm
+not the only one who's felt that way.
+
+So, with the recent release of Hyperbole 7.0.3, and inspired by Cheong
+Yiufung's "Org-Mode Hidden Gems" series, I began a vision quest to figure this
+package out. I have read the manual. I have tried out everything I could. 
+
+I think part of the problem is straight-up the terminology Hyperbole uses.
+Hyperbole enables magic, but that magic is encoded in the strange runes of an
+eldritch tonguye. It's kinda like the terminology in Emacs around Windows and
+Frames, honestly -- and like with Winodws and Frames, once you get your head
+around what the terminology is actually referring to, everything starts to make
+a lot more sense.
+
+So, these are a couple of my findings. This is not even remotely comprehensive
+-- it's just some stuff I've used Hyperbole for and think is cool. If there's
+interest in hearing more, let me know and I can get into some of the other
+corners of this beast.
+
+* Magic Power 1) Implicit Buttons turn Any and Every Document into Hypertext
+
+Okay. The first magical thing Hyperbole does is turn any document, created by
+any person on any computer into hypertext -- without markup or preparation.
+Hyperbole does this by recognizing a fairly large set string patterns as either
+links or actionable items out of the box.
+
+** Specific Examples
+
+First example: Hyperbole turns every URL in every file a link -- so if you
+come across a URL like https://www.loc.gov in a plain text file somewhere,
+hittin M-RET will activate it in your browser of choice. Easy enough.
+
+And, like any good hypertext system, Hyperbole knows what to do with email
+addresses too -- M-RET on an address like thosebastards@congress.gov will pop
+open a message buffer for you to fill with invective.
+
+And of course it recognizes accounts on a couple major social media platforms
+-- though the syntax is a little odd, because there's not really a universal
+format for these sorts of things the way there is for email. Still, it's cool
+to jump straight to to twitter@jeffgerstmann or facebook@giantbombdotcom
+without having to make a link, just by hitting M-RET
+
+Works for hashtags, too, like twitter#baseball or instagram#food
+
+This linking also works for directories on your computer. I can just leave this
+-- ~/.emacs.d/ -- in this file, and M-RET on it will take you to your own
+.emacs.d directory in Dired. Works great on Windows, too: c:\Windows\
+
+But it doesn't stop there! There's, like, a forty different kinds of references
+that it understands as links, from Git references to key combinations to ctags
+and man pages and Info nodes. 
+
+Dang, that's cool.
+
+** Many Mysteries Remain, Though
+
+A problem I've run into, though, is certain kinds of links referenced in the
+manual aren't 100% clear to me.
+
+For example, the manual mentions Annotated Bibliography enties as something it
+recognizes -- but it doesn't give a clear idea of what link syntax it's looking
+for, or whether it's compatible with Bibtex or what. Since most of my Emacs use
+is around academic writing, I would be SUPER interested in figuring this out,
+but that may have to wait for another day.
+
+* Magic Power 2) Global Buttons are Bookmarks on Steroids
+
+The second magical thing Hyperbole does is create obscenely powerful bookmarks.
+I've been looking for a better way to work with bookmarks for a while, and I
+think maybe Hyperbole is the answer.
+
+What makes Global Buttons so powerful is they're basically shortcuts for a
+bunch of different action types. 
+
+A really basic action might be to link to a file -- create a Global Button that
+links to that screenplay you've been working on, and you can jump to it any
+time with a couple keystrokes. That's not that big a deal though: the built-in
+Emacs bookmarks can do that. There's an action for directories as well.
+
+You can link to web searches, URLs of all sorts. You can link to the 12th match
+of a regex in a file. Mail messages. And, again, like 30 more things.
+
+And, of course, you can bookmark elisp or console commands and run them at a
+button press without having to write a specific function and saving it
+somewhere. Neat.
+
+** Wishlist
+
+These Global Buttons could be expanded to do some really buck-wild stuff. Like,
+Hyperbole already recognizes strings of key presses like {C-a M-f * M-b *} as
+an actionable explicit button -- it would be /fantastic/ for someone like me
+who has only the barest grasp of Elisp, but who knows keyboard commands like
+crazy, to be able to bookmark the keyboard commands directly. Yes, yes, I could
+just make a macro -- it would just be a different way, with different notation.
+
+And I don't know how extensible this package is, but you could really write
+some amazing plugins to work with this stuff.
+
+* Magic Power 3) Move and control frames and windows with just the keyboard
+
+This one may not seem special right off the bat -- "I've got a mouse and there
+are like a thousand packages to handle window sizing, so who needs this?"
+
+** How I Use This
+
+Because I'm trying to prevent my poor hands from turning into gnarled, useless
+claws, I extensively use speech recognition software. Hyperbole's frame and
+window controls let me set up workspaces and move stuff with a few vocal
+commands, without having to type or use a mouse. 
+
+I've got a vocal shortcut "Hyperbole Frame Control" which runs the keyboard
+sequence {C-h h s f} -- this puts me in frame control mode. I can then say
+"Numeral 20" to set the distance I want to move the frame around with each
+action. And then I just say the letter of the thing I want to do. 
+
+In practice, fiddling with the frame sizes sounds like: "Hyperbole Frame
+Control. Press Period. Numeral 20. Go left ten. Press H. Press W. Press Q." It's
+just... great. I can't say enough nice things about that. 
+
+And it can do the other stuff you expect, like saving window and frame
+configurations and stuff.
+
+* A Consistent Computing Environment
+ 
+Okay, this is running long
+
+Basically, Hyperbole helps me maintain a consistent computing environment.
+
+It's like how Emacs lets me edit everything in a familiar, consistent
+environment, regardless of the computer system I'm using. Hyperbole lets me
+interact with information (as well as frames and windows) in a consistent and
+predictable way, on any Emacs install -- and it does this without my needing to
+think much about it, because hyperbole more or less knows what to do out of the
+box. 
+
+I genuinely wish hyperbole were a more popular package, because the framework
+it provides -- despite some odd naming conventions -- could be expanded from "a
+cool solution for certain kinds of hypertext" to a staggeringly powerful
+information reference tool. If there were a community supporting an extending
+this functionality, it could easily become the org-mode of information work.
