@@ -126,16 +126,21 @@ action. And then I just say the letter of the thing I want to do.
 
 In practice, fiddling with the frame sizes sounds like: "Hyperbole Frame
 Control. Press Period. Numeral 20. Go left ten. Press H. Press W. Press Q." It's
-just... great. I can't say enough nice things about that. 
+just... great. I can't say enough nice things about it. I always know I've found
+a killer piece of functionality when I find myself desperately wishing I had it
+/everywhere/. If I could control every window on my PC with the same ease as 
+I can control Emacs frames, I'd be a very happy camper.
 
-And it can do the other stuff you expect, like saving window and frame
-configurations and stuff.
+It can do the other stuff you expect, of course -- like saving window and frame
+configurations and stuff. I haven't fully plumbed the depths of what it can do,
+because there's just... a lot.
 
 ** A Consistent Computing Environment
  
 Okay, this is running long
 
-Basically, Hyperbole helps me maintain a consistent computing environment.
+Basically, Hyperbole looks like it'll help me maintain a more consistent 
+computing environment.
 
 It's like how Emacs lets me edit everything in a familiar, consistent
 environment, regardless of the computer system I'm using. Hyperbole lets me
