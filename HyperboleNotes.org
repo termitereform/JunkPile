@@ -110,7 +110,7 @@ are like a thousand packages to handle window sizing, so who needs this?"
 
 But I keep coming back to this feature of Hyperbole, because I've never found
 anything quite like it anywhere else. And now that I've fit it into a workflow,
-I'd almost certainly keep Hyperbole installed just to use it.
+I'll almost certainly keep Hyperbole installed just to use it.
 
 *** How I Use This
 
