@@ -105,7 +105,9 @@ Hyperbole already recognizes strings of key presses like {C-a M-f * M-b *} as
 an actionable explicit button -- it would be /fantastic/ for someone like me
 who has only the barest grasp of Elisp, but who knows keyboard commands like
 crazy, to be able to bookmark the keyboard commands directly. Yes, yes, I could
-just make a macro -- it would just be a different way, with different notation.
+just make a macro -- this would just be a different way, to get to the same
+place, with notations that I find easier to remember. More ways to get to 
+the same outcome is usually a good thing.
 
 And I don't know how extensible this package is, but you could really write
 some amazing plugins to work with this stuff.
