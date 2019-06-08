@@ -13,7 +13,7 @@ package out. I have read the manual. I have tried out everything I could.
 
 I think part of the problem is straight-up the terminology Hyperbole uses.
 Hyperbole enables magic, but that magic is encoded in the strange runes of an
-eldritch tonguye. It's kinda like the terminology in Emacs around Windows and
+eldritch tongue. It's kinda like the terminology in Emacs around Windows and
 Frames, honestly -- and like with Winodws and Frames, once you get your head
 around what the terminology is actually referring to, everything starts to make
 a lot more sense.
