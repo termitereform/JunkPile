@@ -89,12 +89,14 @@ links to that screenplay you've been working on, and you can jump to it any
 time with a couple keystrokes. That's not that big a deal though: the built-in
 Emacs bookmarks can do that. There's an action for directories as well.
 
-You can link to web searches, URLs of all sorts. You can link to the 12th match
-of a regex in a file. Mail messages. And, again, like 30 more things.
+You can link to web searches, URLs of all sorts. You can link to the 4th match
+of a regex in a dynamic log file. Mail messages. And, again, like 30 more things.
+And, again, some of those 30 things aren't super clear to me from the manual.
 
-And, of course, you can bookmark elisp or console commands and run them at a
-button press without having to write a specific function and saving it
-somewhere. Neat.
+And, of course, you can bookmark arbitrary elisp or console commands and run 
+them at a button press without having to write a specific function and saving it
+somewhere. I've made some toggle switches for annoying settings that don't have
+built-in =toggle-this-setting= functions. I think that's neat.
 
 *** Wishlist
 
