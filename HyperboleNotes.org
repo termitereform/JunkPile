@@ -5,12 +5,13 @@
 I've been trying, and failing, to understand GNU Hyperbole for a few years --
 the package always reminded me of the Monolith from 2001: an object that
 radiated power, but whose purpose was beyond my comprehension. And I know I'm
-not the only one who's felt that way. I know I've installed and then 
-uninstalled the Hyperbole package a number of times, without it sticking.
+not the only one who's felt that way. I know I've installed, used, and then 
+uninstalled the Hyperbole package a number of times, without it sticking. 
 
 So, with the recent release of Hyperbole 7.0.3, and inspired by Cheong
 Yiufung's "Org-Mode Hidden Gems" series, I began a vision quest to figure this
-package out. I have read the manual. I have tried out everything I could. 
+package out. I have read the manual. I have tried out everything I could. And
+this time, I think it's gonna stick.
 
 I think part of the problem is straight-up the terminology Hyperbole uses.
 Hyperbole enables magic, but that magic is encoded in the strange runes of an
@@ -143,14 +144,16 @@ Basically, Hyperbole looks like it'll help me maintain a more consistent
 computing environment.
 
 It's like how Emacs lets me edit everything in a familiar, consistent
-environment, regardless of the computer system I'm using. Hyperbole lets me
-interact with information (as well as frames and windows) in a consistent and
-predictable way, on any Emacs install -- and it does this without my needing to
-think much about it, because hyperbole more or less knows what to do out of the
-box. 
+environment, regardless of the computer system I'm using. Hyperbole appears to
+let me interact with information (as well as frames and windows) in a consistent 
+and predictable way, on any Emacs install -- and it does this without my needing 
+to  think much about it, because hyperbole more or less knows what to do out of 
+the box. That's absolutely crucial for a dummy like me.
 
 I genuinely wish hyperbole were a more popular package, because the framework
 it provides -- despite some odd naming conventions -- could be expanded from "a
 cool solution for certain kinds of hypertext" to a staggeringly powerful
-information reference tool. If there were a community supporting an extending
-this functionality, it could easily become the org-mode of information work.
+information reference tool. Like, you can see where it could go from here, and
+it's tantalizing. If there were a community supporting an extending this 
+functionality, I think Hyperbole could easily become the org-mode of information 
+work.
