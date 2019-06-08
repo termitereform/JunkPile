@@ -2,8 +2,8 @@
 
 ** Introduction
 
-I've been trying, and failing, to understand GNU Hyperbole for a few years --
-the package always reminded me of the Monolith from 2001: an object that
+I've been trying, and failing, to understand GNU Hyperbole for a few years.
+The package has always reminded me of the Monolith from 2001: an object that
 radiated power, but whose purpose was beyond my comprehension. And I know I'm
 not the only one who's felt that way. I know I've installed, used, and then 
 uninstalled the Hyperbole package a number of times, without it sticking. 
