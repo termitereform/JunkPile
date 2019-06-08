@@ -1,4 +1,4 @@
-* Hyperbole Vision Quest
+* My GNU Hyperbole Vision Quest
 
 ** Introduction
 
