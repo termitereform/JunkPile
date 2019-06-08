@@ -1,6 +1,6 @@
-#+TITLE: Hyperbole Vision Quest
+* Hyperbole Vision Quest
 
-* Introduction
+** Introduction
 
 I've been trying, and failing, to understand GNU Hyperbole for a few years --
 the package always reminded me of the Monolith from 2001: an object that
@@ -23,14 +23,14 @@ So, these are a couple of my findings. This is not even remotely comprehensive
 interest in hearing more, let me know and I can get into some of the other
 corners of this beast.
 
-* Magic Power 1) Implicit Buttons turn Any and Every Document into Hypertext
+** Magic Power 1) Implicit Buttons turn Any and Every Document into Hypertext
 
 Okay. The first magical thing Hyperbole does is turn any document, created by
 any person on any computer into hypertext -- without markup or preparation.
 Hyperbole does this by recognizing a fairly large set string patterns as either
 links or actionable items out of the box.
 
-** Specific Examples
+*** Specific Examples
 
 First example: Hyperbole turns every URL in every file a link -- so if you
 come across a URL like https://www.loc.gov in a plain text file somewhere,
@@ -58,7 +58,7 @@ and man pages and Info nodes.
 
 Dang, that's cool.
 
-** Many Mysteries Remain, Though
+*** Many Mysteries Remain, Though
 
 A problem I've run into, though, is certain kinds of links referenced in the
 manual aren't 100% clear to me.
@@ -69,7 +69,7 @@ for, or whether it's compatible with Bibtex or what. Since most of my Emacs use
 is around academic writing, I would be SUPER interested in figuring this out,
 but that may have to wait for another day.
 
-* Magic Power 2) Global Buttons are Bookmarks on Steroids
+** Magic Power 2) Global Buttons are Bookmarks on Steroids
 
 The second magical thing Hyperbole does is create obscenely powerful bookmarks.
 I've been looking for a better way to work with bookmarks for a while, and I
@@ -90,7 +90,7 @@ And, of course, you can bookmark elisp or console commands and run them at a
 button press without having to write a specific function and saving it
 somewhere. Neat.
 
-** Wishlist
+*** Wishlist
 
 These Global Buttons could be expanded to do some really buck-wild stuff. Like,
 Hyperbole already recognizes strings of key presses like {C-a M-f * M-b *} as
@@ -102,12 +102,12 @@ just make a macro -- it would just be a different way, with different notation.
 And I don't know how extensible this package is, but you could really write
 some amazing plugins to work with this stuff.
 
-* Magic Power 3) Move and control frames and windows with just the keyboard
+** Magic Power 3) Move and control frames and windows with just the keyboard
 
 This one may not seem special right off the bat -- "I've got a mouse and there
 are like a thousand packages to handle window sizing, so who needs this?"
 
-** How I Use This
+*** How I Use This
 
 Because I'm trying to prevent my poor hands from turning into gnarled, useless
 claws, I extensively use speech recognition software. Hyperbole's frame and
@@ -126,7 +126,7 @@ just... great. I can't say enough nice things about that.
 And it can do the other stuff you expect, like saving window and frame
 configurations and stuff.
 
-* A Consistent Computing Environment
+** A Consistent Computing Environment
  
 Okay, this is running long
 
