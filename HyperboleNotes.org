@@ -51,12 +51,12 @@ without having to make a link, just by hitting M-RET
 Works for hashtags, too, like twitter#baseball or instagram#food
 
 This linking also works for directories on your computer. I can just leave this
--- ~/.emacs.d/ -- in this file, and M-RET on it will take you to your own
-.emacs.d directory in Dired. Works great on Windows, too: c:\Windows\
+-- =~/.emacs.d/= -- in this file, and M-RET on it will take you to your own
+.emacs.d directory in Dired. Works great on Windows, too: =c:\Windows\=
 
 And where there are directories, there are also files, so you can get to your
-init file by M-RET'ing on ~\.emacs.d\init.el (or maybe ~\.emacs if you're a 
-monster).
+init file by M-RET'ing on =~\.emacs.d\init.el= (or maybe =~\.emacs= if you're 
+a monster).
 
 But it doesn't stop there! There's, like, a forty different kinds of references
 that it understands as links, from Git references to key combinations to ctags
