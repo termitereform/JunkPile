@@ -34,7 +34,7 @@ links or actionable items out of the box.
 
 First example: Hyperbole turns every URL in every file a link -- so if you
 come across a URL like https://www.loc.gov in a plain text file somewhere,
-hittin M-RET will activate it in your browser of choice. Easy enough.
+hitting M-RET will activate it in your browser of choice. Easy enough.
 
 And, like any good hypertext system, Hyperbole knows what to do with email
 addresses too -- M-RET on an address like thosebastards@congress.gov will pop
