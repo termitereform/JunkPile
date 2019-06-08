@@ -13,7 +13,7 @@ Yiufung's "Org-Mode Hidden Gems" series, I began a vision quest to figure this
 package out. I have read the manual. I have tried out everything I could. And
 this time, I think it's gonna stick.
 
-I think part of the problem is straight-up the terminology Hyperbole uses.
+A note, though: part of the problem is straight-up the terminology Hyperbole uses.
 Hyperbole enables magic, but that magic is encoded in the strange runes of an
 eldritch tongue. It's kinda like the terminology in Emacs around Windows and
 Frames, honestly -- and like with Winodws and Frames, once you get your head
