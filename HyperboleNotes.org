@@ -32,7 +32,7 @@ links or actionable items out of the box.
 
 *** Specific Examples
 
-First example: Hyperbole turns every URL in every file a link -- so if you
+First example: Hyperbole turns every URL in every file into a link -- so if you
 come across a URL like https://www.loc.gov in a plain text file somewhere,
 hitting M-RET will activate it in your browser of choice. Easy enough.
 
