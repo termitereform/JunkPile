@@ -25,7 +25,7 @@ So, these are a couple of my findings. This is not even remotely comprehensive
 interest in hearing more, let me know and I can get into some of the other
 corners of this beast.
 
-** Magic Power 1) Implicit Buttons turn Any and Every Document into Hypertext
+** Magic Power 1) Implicit Buttons Turn Any and Every Document Into Hypertext
 
 Okay. The first magical thing Hyperbole does is turn any document, created by
 any person on any computer into hypertext -- without markup or preparation.
