@@ -165,8 +165,8 @@ Emacs full-time.
 
 One of my workflows used to be:
 
-1. While working, hit a point where I have something pre-written, like a code
-   snippet or a template email.
+1. While working, hit a point where I need to add something pre-written, like 
+   a code snippet or a template email.
 2. Open notes file manually
 3. Search through headings until I find what I want
 4. Select region and copy
