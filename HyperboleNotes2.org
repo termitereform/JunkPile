@@ -1,0 +1,174 @@
+#+TITLE: Hyperbole: Odyssey Two
+
+* Introduction
+
+In this second sojourn into GNU Hyperbole, we're talking about HyRolo -- which
+has a name that implies a fairly limited set of use cases (specifically as a
+contact manager/rolodex) but... if you scratch the surface, HyRolo is a great
+tool for WAY more than that. 
+
+* HyRolo is Smart
+
+The manual primarily describes HyRolo as a contact manager, and gives examples
+of how to use it as such. But, if you read a little bit closer, you'll notice
+that the manual also says things like "Hyperbole includes ... HyRolo, for
+convenient management of hierarchical, record-oriented information" and --
+regarding entries in a HyRolo file -- "[after] this initial delimiter [of one
+or more asterisks, which signifies the start of an 'entry'], entries are
+completely free-form text". 
+
+What this means, without the manual saying so explicitly, is that HyRolo is a
+tool that parses Emacs-style star outlines in a variety of ways. Because Org's
+headlines are just star outlines, HyRolo /already knows what to do with them./
+
+I keep a lot of notes. I've tried all sorts of methods for storing, indexing,
+and retrieving them. I started out with a file called "blah.txt" that sat on my
+desktop when I was a teenager. Then in the early 2000s, I got /way/ into
+Notational Velocity. Then, when that became abandonware, and I got a smart
+phone, I used Simplenote extensively. After that, I switched to Org-Mode and
+Emacs... but I've never really been happy with my options for managing my
+grimoire of notes. I used Deft for a while, but maaaaan is Deft slow if you
+have a lot of notes -- I had to give it up, and was just kinda resigned to
+doing things the hard way... until I tried HyRolo.
+
+Literally all I had to do to get HyRolo to work with my large set of notes was
+customize a variable with the location of the files I wanted to have available
+for ready-reference. I didn't have to change my Org file in any way, and I
+didn't have to configure anything beyond telling HyRolo where to look -- HyRolo
+just read the documents and knew what to do with them. And because HyRolo can
+work with multiple files at once, you can add a file with your project notes,
+and anything else that makes sense and work with all of them at once. Sort of
+like Agenda files in Org.
+
+* HyRolo's Search Options are Killer
+
+Once my notes files were in HyRolo, I could use the search tools. The search
+tools are the killer app here.
+
+First off, because it's part of Hyperbole *the search tools are universal* --
+this means that, anywhere I am, in any file doing anything, I can just invoke,
+for example, {C-h h r r} and run a regex search of my all my notes. That's
+convenient as heck: I have a single, familiar interface, always available,
+ready to retrieve whatever I need at a moment's notice, without having to
+configure a bunch of external packages. Rad. I know people use Helm and custom
+Python scripts and a variety of external utilites to accomplish the same thing.
+Unfortunately, I don't use Helm. I don't like how it works, and even if I were
+willing to look past its idiosyncracies, Helm is also unbearably slow on the
+sad little laptop I've been assigned by my employer.
+
+Second, *HyRolo's searches are F-A-S-T* -- like, ~ag~ on an SSD fast. This
+shouldn't impress me, I guess, but it super does. Especially after suffering
+through the Deft's glacial response for so long -- and extra especially because
+it's even fast on the afore-mentioned Bronze Age Work Laptop I've gotta use for
+a bunch of my day-to-day computing.
+
+Third, *HyRolo is smart about how it presents search results.* When I search, I
+get a pop-up, read-only buffer that shows me only the entries that match my
+search -- and I can use {TAB}/{Shift-TAB} to jump between those matches. This
+lets me reference the information my files in a safe, static form, without
+having to actually load them into Org, with all the code highlighting and
+whatnot that that would entail. I'm also not risking inadvertent changes, which
+has happened more often than I'd like to admit because I've never been an
+especially careful typist. And, even better, because this is all part of
+Hyperbole, I can { M-RET } on any match to jump to the entry I want in the
+editable, live Notes file to make changes if need be. Great stuff.
+
+* HyRolo Can Also Do a Bunch of Other Useful Stuff...
+
+...but there are some hiccups.
+
+I'm gonna preface this section by saying I think there's maybe something wrong
+with v7.0.3 of Hyperbole, because there's features that just doesn't seem to
+work right anymore. I was going to wait to post this until after the next
+version was released, but instead -- let's talk about it.
+
+First -- HyRolo can automatically re-order the entries in the files it works
+with, which is pretty handy if you (as I do) number your note entries... at
+least, HyRolo used to be able to this. Now I get an infinite hang.
+
+Looking at the results of ~debug-on-quit~, the infinite loop seems to be
+something to do with ~outline-flag-region~ but I don't know enough to
+troubleshoot the problem beyond that. This happens even with the Demo Rolo that
+comes with Hyperbole, so I don't think it's a problem with the way my files are
+structured? 
+
+Second -- HyRolo can yank entries into the file you're working on. This is
+awesome! I do a lot of work with students, and I re-use bits of verbiage
+wherever I can, since most of their problems have known solutions. Being able
+to, at a command, drop my form response into an email is just too good. 
+
+If I had one wish, though, it would be better handling of multiple matches.
+When you use the Yank command, it asks for an entry name. If you enter an exact
+match for one of the entries in the Rolo File, it inserts the entry. Cool. The
+problem is, what if you don't remember exactly what you want to insert? Even if
+I were using this as a contact manager -- say I thought, "I should send this to
+that guy... Smith. Something Smith." I put Smith into HyRolo, and it gives me
+the first match, which may or may not be what I want. Because HyRolo doesn't
+have tab completion of names, or show me a list of matches when there's more
+than one hit on my search, I have to be a lot more precise about my yanking
+than I'd like. 
+
+Third -- The "StringFind" search tool seems to be busted currently, but it's
+pretty killer when it works. Basically, it lets you do boolean searches through
+records, so entering:
+
+~(and sonnet italian (not petrarch))~
+
+Should bring up all of the entries that include the first two terms, and
+exclude the third term. Currently, though, it doesn't work right. I'm about 70%
+sure it's a bug and not user error, but I may just not understand something?
+
+* My Config
+
+And finally, because this's a post about Emacs, I'm legally obligated to
+include some configuration code -- here's what I've modified to use HyRolo for
+searching through notes rather than people.
+
+#+begin_src elisp 
+;; To add Org files directly to HyRolo so they're searchable, customize this 
+;; variable:.
+(setq hyrolo-file-list '("~/Org/Notes.org" "~/Org/WebsiteRedesignPlan.org"))
+
+;; You'll probably need to set the face for HyRolo's word highlighting. I chose
+;; purple with an underline:
+(setq hyrolo-highlight-face '(:background "SystemWindowText" :foreground "purple1" :underline t))
+
+;; The below prevents HyRolo from seeing Org's *bold* markup as a heading when 
+;; it happens at the start of a line
+(setq hyrolo-entry-regexp "^\\*+ ")
+
+;; To stop HyRolo inserting the date at the end of your Org entries when you
+;; visit them, add this after you load Hyperbole in your init:
+(remove-hook 'hyrolo-edit-hook #'hyrolo-set-date)
+
+;; To stop HyRolo adding the date at the end of your Org entries when you
+;; Add a record, add this after you load Hypervole in your init:
+(remove-hook 'hyrolo-add-hook #'hyrolo-set-date)
+#+end_src
+
+* Conclusion
+
+HyRolo won't necessarily solve everyone's problems -- but, for me, it solves
+the specific information referencing problem that I've had since moving to
+Emacs full-time.
+
+One of my workflows used to be:
+
+1. While working, hit a point where I have something pre-written, like a code
+   snippet or a template email.
+2. Open notes file manually
+3. Search through headings until I find what I want
+4. Select region and copy
+5. Return to buffer and yank.
+
+Now it's:
+
+1. Need to insert from notes.
+2. {C-h h r y}
+3. Enter entry, hit return
+
+Or with searching, I used to have to stop what I was doing, go find the right
+file manually, search through it for the information, then come back. Now it's
+just a quick key sequence and a search to get there. It's fast, and it's
+convenient, and it matches the way I tend to want to work, which is all I
+really hope for from a tool. 
