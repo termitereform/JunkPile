@@ -101,13 +101,18 @@ to, at a command, drop my form response into an email is just too good.
 If I had one wish, though, it would be better handling of multiple matches.
 When you use the Yank command, it asks for an entry name. If you enter an exact
 match for one of the entries in the Rolo File, it inserts the entry. Cool. The
-problem is, what if you don't remember exactly what you want to insert? Even if
-I were using this as a contact manager -- say I thought, "I should send this to
-that guy... Smith. Something Smith." I put Smith into HyRolo, and it gives me
-the first match, which may or may not be what I want. Because HyRolo doesn't
-have tab completion of names, or show me a list of matches when there's more
-than one hit on my search, I have to be a lot more precise about my yanking
-than I'd like. 
+problem is, what if you don't remember exactly what you want to insert? 
+
+Even if I were using HyRolo as a contact manager, the behavior with multiple
+results is less than ideal. Say that I thought, "I should send this file to
+that guy... Smith. Something Smith." If I put Smith into HyRolo's Yank command,
+HyRolo inserts the first match -- but that may or may not be what I want.
+Because HyRolo doesn't have tab completion of entries, and doesn't show me a
+list of matches when there's more than one hit on my search, I have to be a lot
+more precise about my yanking than I'd like. I get around this by doing a quick
+search first, and making sure enter something unambiguous in the prompt -- it
+takes an extra step, but I find the convenience of dropping stuff outweighs the
+extra work. Could be smoother, though, for sure.
 
 Third -- The "StringFind" search tool seems to be busted currently, but it's
 pretty killer when it works. Basically, it lets you do boolean searches through
