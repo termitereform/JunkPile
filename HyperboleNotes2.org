@@ -144,12 +144,17 @@ searching through notes rather than people.
 (setq hyrolo-entry-regexp "^\\*+ ")
 
 ;; To stop HyRolo inserting the date at the end of your Org entries when you
-;; visit them, add this after you load Hyperbole in your init:
+;; visit them from HyRolo to make edits, add this after you load Hyperbole 
+;; in your init:
 (remove-hook 'hyrolo-edit-hook #'hyrolo-set-date)
 
 ;; To stop HyRolo adding the date at the end of your Org entries when you
 ;; Add a record, add this after you load Hypervole in your init:
 (remove-hook 'hyrolo-add-hook #'hyrolo-set-date)
+
+;; Both of the above remove dates across the board when adding and editing
+;; though, which may not be what you want. I generally don't want edit 
+;; dates, so I'm fine turning them off. YMMV.
 #+end_src
 
 ** Conclusion
