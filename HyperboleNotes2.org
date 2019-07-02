@@ -60,7 +60,8 @@ Second, *HyRolo's searches are F-A-S-T* -- like, ~ag~ on an SSD fast. This
 shouldn't impress me, I guess, but it super does. Especially after suffering
 through the Deft's glacial response for so long -- and extra especially because
 it's even fast on the afore-mentioned Bronze Age Work Laptop I've gotta use for
-a bunch of my day-to-day computing.
+a bunch of my day-to-day computing. My primary notes file is >88,000 words long,
+and search results are /instantaneous/. Wow.
 
 Third, *HyRolo is smart about how it presents search results.* When I search, I
 get a pop-up, read-only buffer that shows me only the entries that match my
