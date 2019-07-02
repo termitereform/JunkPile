@@ -79,7 +79,7 @@ editable, live Notes file to make changes if need be. Great stuff.
 ...but there are some hiccups.
 
 I'm gonna preface this section by saying I think there's maybe something wrong
-with v7.0.3 of Hyperbole, because there's features that just doesn't seem to
+with v7.0.3 of Hyperbole, because there are features that just don't seem to
 work right anymore. I was going to wait to post this until after the next
 version was released, but instead -- let's talk about it.
 
