@@ -178,7 +178,6 @@ Now it's:
 2. {C-h h r y}
 3. Enter entry, hit return
 
-
 Or, when it came to searching, I used to have to stop what I was doing, go find
 the right file manually, search through it for the information, then come back.
 Now it's just a quick key sequence and a search to get there. 
@@ -189,3 +188,5 @@ some tweaks to a few regexes here and there could make things work even more
 smoothly. But, it does most of what I want out of the box. It's fast, and it's
 convenient, and it matches the way I tend to want to work, which is all I
 really want for from a tool.
+
+My only real wishlist for HyRolo, beyond fixing some of the bugs I've encountered, would be the ability to turn a search result into a Button. There may be functionality in there to do that already, but I haven't seen it if so. But the ability to bookmark a complicated search that I do all the time would be fantastic -- one less step!
