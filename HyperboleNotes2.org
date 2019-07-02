@@ -110,7 +110,7 @@ HyRolo inserts the first match -- but that may or may not be what I want.
 Because HyRolo doesn't have tab completion of entries, and doesn't show me a
 list of matches when there's more than one hit on my search, I have to be a lot
 more precise about my yanking than I'd like. I get around this by doing a quick
-search first, and making sure enter something unambiguous in the prompt -- it
+search first, and making sure to enter something unambiguous in the prompt -- it
 takes an extra step, but I find the convenience of dropping stuff outweighs the
 extra work. Could be smoother, though, for sure.
 
