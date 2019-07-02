@@ -80,7 +80,7 @@ editable, live Notes file to make changes if need be. Great stuff.
 
 I'm gonna preface this section by saying I think there's maybe something wrong
 with v7.0.3 of Hyperbole, because there are features that just don't seem to
-work right anymore. I was going to wait to post this until after the next
+work right anymore. In fact, I was going to wait to post this until after the next
 version was released, but instead -- let's talk about it.
 
 First -- HyRolo can automatically re-order the entries in the files it works
