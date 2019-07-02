@@ -1,13 +1,13 @@
-#+TITLE: Hyperbole: Odyssey Two
+* Hyperbole: Odyssey Two
 
-* Introduction
+** Introduction
 
 In this second sojourn into GNU Hyperbole, we're talking about HyRolo -- which
 has a name that implies a fairly limited set of use cases (specifically as a
 contact manager/rolodex) but... if you scratch the surface, HyRolo is a great
 tool for WAY more than that. 
 
-* HyRolo is Smart
+** HyRolo is Smart
 
 The manual primarily describes HyRolo as a contact manager, and gives examples
 of how to use it as such. But, if you read a little bit closer, you'll notice
@@ -40,7 +40,7 @@ work with multiple files at once, you can add a file with your project notes,
 and anything else that makes sense and work with all of them at once. Sort of
 like Agenda files in Org.
 
-* HyRolo's Search Options are Killer
+** HyRolo's Search Options are Killer
 
 Once my notes files were in HyRolo, I could use the search tools. The search
 tools are the killer app here.
@@ -73,7 +73,7 @@ especially careful typist. And, even better, because this is all part of
 Hyperbole, I can { M-RET } on any match to jump to the entry I want in the
 editable, live Notes file to make changes if need be. Great stuff.
 
-* HyRolo Can Also Do a Bunch of Other Useful Stuff...
+** HyRolo Can Also Do a Bunch of Other Useful Stuff...
 
 ...but there are some hiccups.
 
@@ -118,7 +118,7 @@ Should bring up all of the entries that include the first two terms, and
 exclude the third term. Currently, though, it doesn't work right. I'm about 70%
 sure it's a bug and not user error, but I may just not understand something?
 
-* My Config
+** My Config
 
 And finally, because this's a post about Emacs, I'm legally obligated to
 include some configuration code -- here's what I've modified to use HyRolo for
@@ -146,7 +146,7 @@ searching through notes rather than people.
 (remove-hook 'hyrolo-add-hook #'hyrolo-set-date)
 #+end_src
 
-* Conclusion
+** Conclusion
 
 HyRolo won't necessarily solve everyone's problems -- but, for me, it solves
 the specific information referencing problem that I've had since moving to
