@@ -82,6 +82,9 @@ This also makes the file-finding and completion in Emacs work more sanely. You
 can, for example, find file, hit `~\Org\somefile.org` and it'll work as
 expected.
 
+And, of course, cou can use `(getenv "home")` in your config and have that 
+do something useful.
+
 # Daemon-Client Setup in Windows
 
 Okay, so you've got Emacs looking in the right place for your init, and your
