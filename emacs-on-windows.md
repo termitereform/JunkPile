@@ -149,6 +149,24 @@ target:
 
 Which allows me to run the `debug-init` stuff easier, when needed.
 
+# Opening Filetypes with Emacs by Default
+
+Let's say I want to open all `.el` files with Emacs by default, and I want it
+to do so by connecting to my Daemon (or starting a new instance if there's no
+Daemon running).
+
+**Step 1:** Right-click on a file of the type you want Emacs to open
+
+**Step 2:** Hover over "Open with.." and pick "Choose another app"
+
+**Step 3:** Ignore all the options and look for "More Apps" 
+
+**Step 4:** *This is the kicker.* Don't find the `.exe` for Emacs, go find the
+`GNU Emacs` shortcut in your Start Menu, and use that. 
+
+Now when you open the file it'll do so using your shortcut, which makes this
+all work as expected.
+
 # Universal "Summon Emacs" and "Org Capture" Keyboard Shortcuts
 
 It's not enough to just have Emacs running -- I like being able to call Emacs
