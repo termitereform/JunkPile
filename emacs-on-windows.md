@@ -1,6 +1,4 @@
-Title: How I Use Emacs on Windows
-
-# Introduction
+# How I Use Emacs on Windows
 
 Because my job traps me on Windows 90% of the time, I've had to adapt my Emacs
 configuration to get everything working well. Who knows if this will be helpful
