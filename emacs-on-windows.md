@@ -37,7 +37,7 @@ Everything lives in Home, and it's backed up all over the place. Parts of this
 folder are selectively synced between machines, as appropriate. I use Nextcloud
 for this, but you can use anything you like.
 
-# Setting System Variables On Your Own Machine
+# Setting System Variables
 
 There are a few system variables I set. In Windows 10, you can set these by
 right-clicking on the Start menu, picking "System" from the list, clicking
