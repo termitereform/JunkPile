@@ -183,7 +183,7 @@ Remember those shortcuts we created? Go find the `GNU Emacs` shortcut in the
 Start Menu, go to Properties, and look in the "Shortcut" tab. 
 
 In the bottom cluster of options, there's a field labeled "Shortcut key". Click
-once into the box, then hit the desired key combination. I use `Ctrl + Alt +
+once into the box, then hit the desired key combination. I use `Ctrl + Shift +
 F1` but you can use whatever. Apply, and close. Now hit your keyboard
 combination, and the shorcut should launch.
 
