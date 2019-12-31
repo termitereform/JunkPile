@@ -5,7 +5,7 @@ configuration to get everything working well. Who knows if this will be helpful
 to anyone else, but I figured I'd describe it.
 
 Everyone does things differently, and since this file is titled "How I Use
-Emacs On Windows", I'll be describing how I do things rather than some
+Emacs On Windows", I'll be describing how *I* do things rather than some
 idealized best practice. 
 
 This should all work with the default distribution of Emacs, using tools that
