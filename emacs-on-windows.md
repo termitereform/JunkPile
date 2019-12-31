@@ -62,7 +62,7 @@ to be able to find, such as:
 
 You can add whatever makes sense to you -- the important thing to keep in mind
 is, a lot of open source tools don't automatically update Windows' `path`
-variable, so when I install anything using `msys` or from the internet, I make
+variable, so when I install anything from the internet, I make
 a habit of checking to make sure it got added to the path correctly.
 
 ## What Setting These Variables Accomplishes
@@ -82,7 +82,7 @@ This also makes the file-finding and completion in Emacs work more sanely. You
 can, for example, find file, hit `~\Org\somefile.org` and it'll work as
 expected.
 
-And, of course, cou can use `(getenv "home")` in your config and have that 
+And, of course, you can use `(getenv "home")` in your config and have that 
 do something useful.
 
 # Daemon-Client Setup in Windows
