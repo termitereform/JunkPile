@@ -195,7 +195,7 @@ shortcut, but it worked correctly after a reboot.
 If you want a universal keyboard shortcut to capture something in Org, you'll
 need to make one more shortcut as before, with the target: 
 
-`E:\Home\Apps\Emacs\bin\emacsclientw.exe -n --eval '(org-capture)'`
+`E:\Home\Apps\Emacs\bin\emacsclientw.exe -n -c -e "(progn (raise-frame)(org-capture))"`
 
 Then, as above, save the shortcut into the Start Menu, and add the keyboard
 shortcut. 
