@@ -6,7 +6,7 @@ to anyone else, but I figured I'd describe it.
 
 Everyone does things differently, and since this file is titled "How I Use
 Emacs On Windows", I'll be describing how *I* do things rather than some
-idealized best practice. 
+idealized best practice.
 
 This should all work with the default distribution of Emacs, using tools that
 you install natively, or through a manager/environment like MSYS, Chocolatey,
@@ -48,7 +48,7 @@ bit, and you'll find instructions to get there on your version of Windows.
 
 In the Environment Variables table, I create:
 
-- `HOME` and set it to `E:\Home` 
+- `HOME` and set it to `E:\Home`
 
 I then modify `path` to include anything I want Emacs (and Windows generally)
 to be able to find, such as:
@@ -82,7 +82,7 @@ This also makes the file-finding and completion in Emacs work more sanely. You
 can, for example, find file, hit `~\Org\somefile.org` and it'll work as
 expected.
 
-And, of course, you can use `(getenv "home")` in your config and have that 
+And, of course, you can use `(getenv "home")` in your config and have that
 do something useful.
 
 # Daemon-Client Setup in Windows
@@ -94,7 +94,7 @@ Now let's talk about getting a Daemon working in Windows.
 It's actually pretty easy! We're going to use the built-in shortcut
 functionality of windows to automatically start a Daemon on boot, and create a
 shortcut that will either connect to that Daemon, or start a new instance if no
-Daemon is running. 
+Daemon is running.
 
 **NB:** For all of these, once they're created, I go back in and set the "Start
 in:" location to `E:\Home\`
@@ -103,7 +103,7 @@ in:" location to `E:\Home\`
 
 **Step 1:** Create a shortcut with the following target:
 
-`E:\Home\Apps\Emacs\bin\runemacs.exe --daemon`
+`E:\Home\Applications\Emacs\bin\runemacs.exe --daemon`
 
 And give it a name like `GNU Emacs Daemon`
 
@@ -119,10 +119,10 @@ And give it a name like `GNU Emacs Daemon`
 
 **Step 1:** Create a shortcut with the following target:
 
-`E:\Home\Apps\Emacs\bin\emacsclientw.exe -n --alternate-editor="E:\Home\Apps\Emacs\bin\runemacs.exe" -c`
+`E:\Home\Applications\Emacs\bin\emacsclientw.exe -n -c -a "E:\Home\Applications\Emacs\bin\runemacs.exe"`
 
 This shortcut first tries to connect using `emacsclient` and if that fails,
-falls back to `runemacs`. 
+falls back to `runemacs`.
 
 Give the shortcut a name like `GNU Emacs`
 
@@ -133,13 +133,13 @@ Give the shortcut a name like `GNU Emacs`
 ### The One True Emacs Shortcut
 
 This is your primary shortcut for interacting with Emacs. I have this pinned to
-the Start Menu, and the Taskbar. 
+the Start Menu, and the Taskbar.
 
 ## Creating a Safe Start Shortcut
 
 I also created a shortcut labeled `GNU Emacs Safe Start`, which has the target:
 
-`E:\Home\Apps\Emacs\bin\runemacs.exe -Q`
+`E:\Home\Applications\Emacs\bin\runemacs.exe -Q`
 
 So I can load Emacs without my init as needed.
 
@@ -148,7 +148,7 @@ So I can load Emacs without my init as needed.
 And finally I created a shortcut labeled `GNU Emacs Debug`, which has the
 target:
 
-`E:\Home\Apps\Emacs\bin\runemacs.exe --debug-init`
+`E:\Home\Applications\Emacs\bin\runemacs.exe --debug-init`
 
 Which allows me to run the `debug-init` stuff easier, when needed.
 
@@ -162,10 +162,10 @@ Daemon running).
 
 **Step 2:** Hover over "Open with.." and pick "Choose another app"
 
-**Step 3:** Ignore all the options and look for "More Apps" 
+**Step 3:** Ignore all the options and look for "More Apps"
 
 **Step 4:** *This is the kicker.* Don't find the `.exe` for Emacs, go find the
-`GNU Emacs` shortcut in your Start Menu, and use that. 
+`GNU Emacs` shortcut in your Start Menu, and use that.
 
 Now when you open the file it'll do so using your shortcut, which makes this
 all work as expected.
@@ -180,10 +180,10 @@ built-in shortcut functionality in Windows.
 and on the desktop.
 
 Remember those shortcuts we created? Go find the `GNU Emacs` shortcut in the
-Start Menu, go to Properties, and look in the "Shortcut" tab. 
+Start Menu, go to Properties, and look in the "Shortcut" tab.
 
 In the bottom cluster of options, there's a field labeled "Shortcut key". Click
-once into the box, then hit the desired key combination. I use `Ctrl + Shift +
+once into the box, then hit the desired key combination. I use `Ctrl + Alt +
 F1` but you can use whatever. Apply, and close. Now hit your keyboard
 combination, and the shorcut should launch.
 
@@ -193,12 +193,12 @@ shortcut, but it worked correctly after a reboot.
 ## Create an Org Capture Keyboard Shortcut
 
 If you want a universal keyboard shortcut to capture something in Org, you'll
-need to make one more shortcut as before, with the target: 
+need to make one more shortcut as before, with the target:
 
-`E:\Home\Apps\Emacs\bin\emacsclientw.exe -n -c -e "(progn (raise-frame)(org-capture))"`
+`E:\Home\Applications\Emacs\bin\emacsclientw.exe -n -c -e "(progn (raise-frame)(org-capture))"`
 
 Then, as above, save the shortcut into the Start Menu, and add the keyboard
-shortcut. 
+shortcut.
 
 # Other Stuff
 
@@ -208,7 +208,7 @@ Digging through my init, I noticed a couple odds and ends that may be helpful.
 
 I have the following in my init, which sets a few variables on Windows
 machines. I tried to gather a couple things here, and set them in one place,
-rather than scattering them throughout my init. 
+rather than scattering them throughout my init.
 
 This sets up spellchecking with Aspell, and fixes Ghostscript so I can view
 PDFs, among other things.
@@ -218,9 +218,9 @@ PDFs, among other things.
       (setq save-interprogram-paste-before-kill 1 ; stop killing my clipboard, plz
             ; ghostscript on windows
             ; see https://www.emacswiki.org/emacs/docviewmode for details
-            doc-view-ghostscript-program "~/apps/msys2/mingw64/bin/gswin32c.exe"
+            doc-view-ghostscript-program "~/Applications/msys2/mingw64/bin/gswin32c.exe"
             ; set curl location
-            request-curl "~/apps/msys2/mingw64/bin/curl.exe")
+            request-curl "~/Applications/msys2/mingw64/bin/curl.exe")
       (cond ((executable-find "aspell") ; spell-checking
              (setq ispell-program-name "aspell")
              (setq ispell-extra-args '("--sug-mode=ultra" "--lang=en_us")))))
@@ -233,20 +233,21 @@ statement:
 ## Drive Letters and Dired
 
 I've got `dired+` installed, which allows me to switch local drives easier in
-`dired` sessions. 
+`dired` sessions.
 
 You can also change drives when finding files by just typing, for example, `C:`
-instead of a file name -- in `counsel`, at least, it works as desired. 
+instead of a file name -- in `counsel`, at least, it works as desired.
 
 ## Info files from MSYS
 
 You can help Emacs find your Msys `info` files by adding the following to your
-init: 
+init:
 
+    ;; Info-mode (Info's gotta be capitalized in the variables!)
     (when (eq system-type 'windows-nt)
-      (setq info-additional-directory-list
+      (setq Info-additional-directory-list
             (quote
-             ("~/applications/msys2/usr/share/info/" "~/applications/msys2/mingw64/share/info"))))
+             ("~/Applications/msys2/usr/share/info" "~/Applications/msys2 /mingw64/share/info"))))
 
 ## Replacing `locate` with `everything` in `counsel`
 
@@ -266,7 +267,7 @@ the Windows search tool `everything` instead:
 ## Mail on Windows?
 
 People love using Emacs for mail. Windows users cannot use any of the popular
-tools like `mu4e`. What to do? 
+tools like `mu4e`. What to do?
 
 Use `gnus` as an IMAP client. It works fine. It's a pain in the ass to set up,
 though, so it may not be worth it for you. If there's interest, I can explain
@@ -282,9 +283,9 @@ A couple things to know:
 
 - When emacs can't find a tool you need, the tool is probably not in your `path`
 - I've found Emacs on Windows to be pretty good about flipping the slashes on
-  paths -- I can use `e:/Home/Apps/` in my variables and and Emacs doesn't bat
+  paths -- I can use `e:/Home/Applications/` in my variables and and Emacs doesn't bat
   an eye. In cases where you need to use Windows-style paths, you gotta escape
-  the backslashes, as in: `E:\\Home\\Apps`
+  the backslashes, as in: `E:\\Home\\Applications`
 - Some packages need you to use the full path (i.e. `e:/Home/Org/...`) when
   customizing their variables rather than pinning them to `home` (i.e.
   `~/Erg/`. I know it's true of `image-dired` and a few other things.
@@ -296,4 +297,4 @@ A couple things to know:
 And that's basically it. I've been very happy with Emacs on Windows, and don't
 really feel like I'm missing out on any important functionality. It took a bit
 of tweaking and reading docs or old Stack Exchange threads to figure out how to
-get it all set up, but it was time well spent. 
+get it all set up, but it was time well spent.
