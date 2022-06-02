@@ -33,7 +33,7 @@ n               display current line with line number
 15,25n          display lines 15 through 25 of the buffer with line numbers
 
 # Line editing commands
-#   All commands can be prefixed with line addresses/ranges
+#   All commands can be prefixed with line addresses or ranges
 
 i               start editing by inserting new text before the current line
 a               start editing by inserting new text after the current line
